@@ -24,6 +24,16 @@
 % moderntimeline
 \usepackage[firstyear=2007,lastyear=2015]{moderntimeline}
 
+% moderntimeline 居中
+\makeatletter
+\tikzset{
+    tl@startyear/.append style={
+        xshift=(0.5-\tl@startfraction)*\hintscolumnwidth,
+        anchor=base
+    }
+}
+\makeatother
+
 %避免cventry加粗的bug
 \renewcommand*{\cventry}[7][.25em]{%
   \cvitem[#1]{#2}{%
@@ -74,25 +84,13 @@
 % \cventry{年 -- 年}{学位}{院校}{城市}{\textit{成绩}}{说明}  % 第3到第6编码可留白
 % \cventry{年 -- 年}{学位}{院校}{城市}{\textit{成绩}}{说明}
 \tllabelcventry{2008}{2012}{2008--2012}{学士}{北京邮电大学}{专业: 信息工程}{主要课程: 数据结构, 信息论, 通信原理, 计算机网络}{}
-\tlcventry{2012}{0}{硕士}{北京邮电大学}{专业: 信息与通信工程}{研究方向: 移动互联网}{}
+\tllabelcventry{2012}{0}{2012--2015}{硕士}{北京邮电大学}{专业: 信息与通信工程}{研究方向: 移动互联网}{}
 
 \section{专业技能}
 \cvitem{}{熟练掌握Linux基本操作，以Arch Linux为日常操作系统}
 \cvitem{}{熟练掌握C、C++、Android应用开发，了解Python、PHP、MySQL、Bash、Makefile}
-\cvitem{}{熟悉Vim、Eclipse、svn、git等开发工具}
-\cvitem{}{掌握Markdown、LaTeX编写文档}
+\cvitem{}{熟悉Vim、Eclipse、svn、git等开发工具，掌握Markdown、LaTeX编写文档}
 \cvitem{}{大学英语六级考试534分}
-
-
-% moderntimeline 居中
-\makeatletter
-\tikzset{
-    tl@startyear/.append style={
-        xshift=(0.5-\tl@startfraction)*\hintscolumnwidth,
-        anchor=base
-    }
-}
-\makeatother
 
 
 \section{在校项目经历}
@@ -120,18 +118,14 @@
 \tllabelcventry{2013.5}{2013.9}{2013.7--2013.11}{运营商管道化现状研究}{北京移动}{}{}{%
 \begin{itemize}%
 \item 工作内容 1;
-\item 工作内容 2;
-\item 工作内容 3。
 \end{itemize}}
 
 \tllabelcventry{2013.9}{0}{2013.12--}{移动网络质量评估体系}{中兴研究院}{}{}{%
 \begin{itemize}%
 \item 工作内容 1;
-\item 工作内容 2;
-\item 工作内容 3。
 \end{itemize}}
 
-\tllabelcventry{2014}{0}{2014.1--}{欧盟国际科研人员交流计划移动云计算项目EU FP7 IRSES MobileCloud Project}{哥廷根大学等}{}{}{%
+\tllabelcventry{2014}{0}{2014.1--}{移动云计算项目EU FP7 IRSES MobileCloud Project}{欧盟国际科研人员交流计划}{}{}{%
 \begin{itemize}%
 \item 工作内容 1;
 \item 工作内容 2;
