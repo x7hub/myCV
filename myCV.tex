@@ -14,11 +14,22 @@
 %\nopagenumbers{}                             % 消除注释以取消自动页码生成功能
 
 % 字符编码
-\usepackage[utf8]{inputenc}                   % 替换你正在使用的编码
-\usepackage{CJKutf8}
+% \usepackage[utf8]{inputenc}                   % 替换你正在使用的编码
+% \usepackage{CJKutf8}
+\usepackage{fontspec}
+\usepackage{xunicode}
+\usepackage{xeCJK}
+
+\setmainfont{WenQuanYi Micro Hei Light}
+\setsansfont{WenQuanYi Micro Hei Light}
+\setmonofont{WenQuanYi Micro Hei Light}
+\setCJKmainfont{WenQuanYi Micro Hei Light}
+\setCJKsansfont{WenQuanYi Micro Hei Light}
+\setCJKmonofont{WenQuanYi Micro Hei Light}
+
 
 % 调整页面出血
-\usepackage[scale=0.81]{geometry}
+\usepackage[scale=0.82]{geometry}
 % %\setlength{\hintscolumnwidth}{3cm}           % 如果你希望改变日期栏的宽度
 
 % moderntimeline
@@ -71,7 +82,7 @@
 %            内容
 %----------------------------------------------------------------------------------
 \begin{document}
-\begin{CJK}{UTF8}{gbsn}                       % 详情参阅CJK文件包
+% \begin{CJK}{UTF8}{gbsn}                       % 详情参阅CJK文件包
 \maketitle
 
 
@@ -110,7 +121,7 @@
 
 \tllabelcventry{2013}{2013.7}{2013.1--2013.10}{无线网络质量测量平台的研究与实现}{NTT DoCoMo北京实验室}{}{}{%
 \begin{itemize}%
-\item Android手机网络测速软件(``手机网速摇摇看''，各大应用市场可下载)，测试项主要包括时延，上下行网速，并将测试结果和用户网络参数上传至服务器数据库，对收集到的大量数据进行分析展示；
+\item Android手机网络测速软件(''手机网速摇摇看''，各大应用市场可下载)，测试项主要包括时延，上下行网速，并将测试结果和用户网络参数上传至服务器数据库，对收集到的大量数据进行分析展示；
 \item 承担核心测试引擎的JNI实现，参与用户数据收集。
 % \item 熟悉Android JNI编程、HTTP协议，了解PHP、MySQL基本操作，加强了团队合作能力。
 \end{itemize}}
@@ -227,7 +238,8 @@
 %\bibliographymisc{publications}               % 'publications' 是BibTeX文件的文件名
 
 
-\clearpage\end{CJK}
+\clearpage
+% \end{CJK}
 \end{document}
 
 
