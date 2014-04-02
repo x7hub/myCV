@@ -1,0 +1,246 @@
+%% start of file `template-zh.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[10pt,a4paper,sans]{moderncv}   % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv 主题
+\moderncvstyle{classic}                        % 选项参数是 ‘casual’, ‘classic’, ‘oldstyle’ 和 ’banking’
+\moderncvcolor{blue}                          % 选项参数是 ‘blue’ (默认)、‘orange’、‘green’、‘red’、‘purple’ 和 ‘grey’
+%\nopagenumbers{}                             % 消除注释以取消自动页码生成功能
+
+% 字符编码
+% \usepackage[utf8]{inputenc}                   % 替换你正在使用的编码
+% \usepackage{CJKutf8}
+\usepackage{fontspec}
+\usepackage{xunicode}
+\usepackage{xeCJK}
+
+\setmainfont{WenQuanYi Micro Hei Light}
+\setsansfont{WenQuanYi Micro Hei Light}
+\setmonofont{WenQuanYi Micro Hei Light}
+\setCJKmainfont{WenQuanYi Micro Hei Light}
+\setCJKsansfont{WenQuanYi Micro Hei Light}
+\setCJKmonofont{WenQuanYi Micro Hei Light}
+
+
+% 调整页面出血
+\usepackage[scale=0.82]{geometry}
+% %\setlength{\hintscolumnwidth}{3cm}           % 如果你希望改变日期栏的宽度
+
+% moderntimeline
+\usepackage[firstyear=2007,lastyear=2015]{moderntimeline}
+
+% moderntimeline 居中
+\makeatletter
+\tikzset{
+    tl@startyear/.append style={
+        xshift=(0.5-\tl@startfraction)*\hintscolumnwidth,
+        anchor=base
+    }
+}
+\makeatother
+
+%避免cventry加粗的bug
+\renewcommand*{\cventry}[7][.25em]{%
+  \cvitem[#1]{#2}{%
+    {#3}%
+    \ifthenelse{\equal{#4}{}}{}{, {#4}}%
+    \ifthenelse{\equal{#5}{}}{}{, #5}%
+    \ifthenelse{\equal{#6}{}}{}{, #6}%
+    .\strut%
+    \ifx&#7&%
+      \else{\newline{}\begin{minipage}[t]{\linewidth}\small#7\end{minipage}}\fi}}
+
+
+% 个人信息
+\name{哟}{嚯嚯}
+% \title{简历题目 (可选项)}                     % 可选项、如不需要可删除本行
+% % \address{街道及门牌号}{邮编及城市}            % 可选项、如不需要可删除本行
+\phone[mobile]{012 3456 7890}              % 可选项、如不需要可删除本行
+% \phone[fixed]{+2~(345)~678~901}               % 可选项、如不需要可删除本行
+% \phone[fax]{+3~(456)~789~012}                 % 可选项、如不需要可删除本行
+\email{x7.0@outlook.com}                    % 可选项、如不需要可删除本行
+\homepage{http://x7hub.github.io}                  % 可选项、如不需要可删除本行
+% \extrainfo{附加信息 (可选项)}                 % 可选项、如不需要可删除本行
+% \photo[64pt][0.4pt]{picture}                  % ‘64pt’是图片必须压缩至的高度、‘0.4pt‘是图片边框的宽度 (如不需要可调节至0pt)、’picture‘ 是图片文件的名字;可选项、如不需要可删除本行
+% \quote{引言(可选项)}                          % 可选项、如不需要可删除本行
+
+% 显示索引号;仅用于在简历中使用了引言
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+
+% 分类索引
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            内容
+%----------------------------------------------------------------------------------
+\begin{document}
+% \begin{CJK}{UTF8}{gbsn}                       % 详情参阅CJK文件包
+\maketitle
+
+
+\section{个人资料}
+\hspace{1.1cm}\cvdoubleitem{性别:}{男}{出生日期:}{1989年8月}
+\hspace{1.1cm}\cvdoubleitem{家乡:}{山东济南}{政治面貌:}{中共党员}
+% \hspace{1.1cm}\cvdoubleitem{学校:}{北京邮电大学}{学历:}{工学硕士}
+
+
+\section{教育背景}
+% \cventry{年 -- 年}{学位}{院校}{城市}{\textit{成绩}}{说明}  % 第3到第6编码可留白
+% \cventry{年 -- 年}{学位}{院校}{城市}{\textit{成绩}}{说明}
+\tllabelcventry{2008}{2012}{2008--2012}{工学学士}{北京邮电大学}{信息工程}{}{
+\begin{itemize}%
+\item 主要课程: 数据结构, 信息论, 通信原理, 计算机网络
+\end{itemize}}
+\tllabelcventry{2012}{0}{2012--2015}{工学硕士}{北京邮电大学}{信号与信息处理}{}{
+\begin{itemize}%
+\item 研究方向: 移动互联网
+\end{itemize}}
+
+\section{专业技能}
+\cvitem{}{熟练掌握Linux基本操作，以Arch Linux为日常操作系统}
+\cvitem{}{熟练掌握C、C++、Android应用开发，了解Python、PHP、MySQL、Bash、Makefile}
+\cvitem{}{熟悉Vim、Eclipse、svn、git等开发工具，掌握Markdown、LaTeX编写文档}
+\cvitem{}{大学英语六级考试534分}
+
+
+\section{在校项目经历}
+\tllabelcventry{2012.2}{2013}{2012.3--2012.12}{绿色3G-WiFi路由器研究}{NTT DoCoMo北京实验室}{}{}{%
+\begin{itemize}%
+\item 在嵌入式Linux系统中实现3G和WiFi网络数据互通，使具有WiFi功能的终端设备连接到路由器享受3G的Internet连接，并针对多种情况优化能耗；
+\item 承担ARM板上系统安装、3G网络拨号连接、WiFi驱动和路由转发、针对FTP和HTTP业务能耗优化。
+% \item 熟悉Linux内核编译，掌握基本Bash脚本，熟悉Socket网络编程。
+\end{itemize}}
+
+\tllabelcventry{2013}{2013.7}{2013.1--2013.10}{无线网络质量测量平台的研究与实现}{NTT DoCoMo北京实验室}{}{}{%
+\begin{itemize}%
+\item Android手机网络测速软件(''手机网速摇摇看''，各大应用市场可下载)，测试项主要包括时延，上下行网速，并将测试结果和用户网络参数上传至服务器数据库，对收集到的大量数据进行分析展示；
+\item 承担核心测试引擎的JNI实现，参与用户数据收集。
+% \item 熟悉Android JNI编程、HTTP协议，了解PHP、MySQL基本操作，加强了团队合作能力。
+\end{itemize}}
+
+\tllabelcventry{2013.5}{2014.1}{2013.7--2014.1}{双卡智能手机四大基本应用开发}{电信天翼终端公司}{}{}{%
+\begin{itemize}%
+\item 针对电信Android双卡双待手机，日历、通讯录、拨号盘、短信的应用开发，以Android 4.1的应用源码为基础的二次开发，扩展功能，优化国际漫游场景下用户体验；
+\item 项目总体负责，承担日历、通讯录、拨号盘三个模块的开发。
+% \item 熟练掌握Android应用开发，熟悉原生应用源码，掌握Android系统编译。
+\end{itemize}}
+
+\tllabelcventry{2013.5}{2013.9}{2013.7--2013.11}{运营商管道资源在数据产品中的优势分析及应用建议研究}{北京移动}{}{}{%
+\begin{itemize}%
+\item 分析运营商的管道价值现状，分析智能手机应用主要获取的信息、信息来源及算法，研究提升运营商的管道价值的策略；
+\item 承担对智能手机获取运营商网络信息的分析，参与研究如何充分发挥管道优势，提升产品的竞争力。
+\end{itemize}}
+
+% \tllabelcventry{2013.9}{0}{2013.12--}{移动网络质量评估体系}{中兴研究院}{}{}{%
+% \begin{itemize}%
+% \item 工作内容 1;
+% \end{itemize}}
+
+\tllabelcventry{2014}{0}{2014.1--}{移动云计算项目EU FP7 IRSES MobileCloud Project}{欧盟国际科研人员交流计划}{}{}{%
+\begin{itemize}%
+\item 国内外多所高校合作研究移动云计算相关课题，传统云计算在移动互联网环境的融合与应用；
+\item 负责研究基于HTTP的动态自适应流媒体(DASH)，提出了在移动云计算环境中的改进方案，参与开发利用Linux服务器和Android终端的系统演示，在IEEE会议中发表了论文。
+\end{itemize}}
+
+
+\section{获奖情况}
+
+
+\cvitem{}{2011-2013年 北京邮电大学三等、二等、一等奖学金}
+\cvitem{}{2013年 泛网无线通信教育部重点实验室优秀学生}
+
+
+\section{自我评价}
+
+\cvitem{}{热爱技术，乐于学习，责任心强，具备快速融入团队的适应能力}
+
+% \cvdoubleitem{操作系统:}{Ubuntu, Fedora, CentOS}{数据库:}{MySQL, HBase\footnotemark[1], Memcached}
+% \cvdoubleitem{编程语言:}{C/C++, Java, Python, Bash, Lua}{工具链:}{GCC, GDB, Binutils, LLVM/Clang}
+% \cvdoubleitem{代码工具:}{Vim, Git, SVN, CMake, Eclipse}{其他工具:}{Valgrind,SystemTap,Gperftools\footnotemark[2]}
+% \cvdoubleitem{文档编写:}{LaTeX, Markdown, Word, PPT}{外语水平:}{英语~6~级(549)}
+
+% \section{毕业论文}
+% \cvitem{题目}{\emph{题目}}
+% \cvitem{导师}{导师}
+% \cvitem{说明}{\small 论文简介}
+
+% \section{工作背景}
+% \subsection{专业}
+% \cventry{年 -- 年}{职位}{公司}{城市}{}{不超过1--2行的概况说明\newline{}%
+% 工作内容:%
+% \begin{itemize}%
+% \item 工作内容 1;
+% \item 工作内容 2、 含二级内容:
+%   \begin{itemize}%
+%   \item 二级内容 (a);
+%   \item 二级内容 (b)、含三级内容 (不建议使用);
+%     \begin{itemize}
+%     \item 三级内容 i;
+%     \item 三级内容 ii;
+%     \item 三级内容 iii;
+%     \end{itemize}
+%   \item 二级内容 (c);
+%   \end{itemize}
+% \item 工作内容 3。
+% \end{itemize}}
+% \cventry{年 -- 年}{职位}{公司}{城市}{}{说明行1\newline{}说明行2}
+% \subsection{其他}
+% \cventry{年 -- 年}{职位}{公司}{城市}{}{说明}
+
+% \section{语言技能}
+% \cvitemwithcomment{语言 1}{水平}{评价}
+% \cvitemwithcomment{语言 2}{水平}{评价}
+% \cvitemwithcomment{语言 3}{水平}{评价}
+
+% \section{计算机技能}
+% \cvdoubleitem{类别 1}{XXX, YYY, ZZZ}{类别 4}{XXX, YYY, ZZZ}
+% \cvdoubleitem{类别 2}{XXX, YYY, ZZZ}{类别 5}{XXX, YYY, ZZZ}
+% \cvdoubleitem{类别 3}{XXX, YYY, ZZZ}{类别 6}{XXX, YYY, ZZZ}
+
+% \section{个人兴趣}
+% \cvitem{爱好 1}{\small 说明}
+% \cvitem{爱好 2}{\small 说明}
+% \cvitem{爱好 3}{\small 说明}
+
+% \section{其他 1}
+% \cvlistitem{项目 1}
+% \cvlistitem{项目 2}
+% \cvlistitem{项目 3}
+
+% \renewcommand{\listitemsymbol}{-}             % 改变列表符号
+
+% \section{其他 2}
+% \cvlistdoubleitem{项目 1}{项目 4}
+% \cvlistdoubleitem{项目 2}{项目 5\cite{book1}}
+% \cvlistdoubleitem{项目 3}{}
+
+% 来自BibTeX文件但不使用multibib包的出版物
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% BibTeX的数字标签
+% \nocite{*}
+% \bibliographystyle{plain}
+% \bibliography{publications}                    % 'publications' 是BibTeX文件的文件名
+
+% 来自BibTeX文件并使用multibib包的出版物
+%\section{出版物}
+%\nocitebook{book1,book2}
+%\bibliographystylebook{plain}
+%\bibliographybook{publications}               % 'publications' 是BibTeX文件的文件名
+%\nocitemisc{misc1,misc2,misc3}
+%\bibliographystylemisc{plain}
+%\bibliographymisc{publications}               % 'publications' 是BibTeX文件的文件名
+
+
+\clearpage
+% \end{CJK}
+\end{document}
+
+
+%% 文件结尾 `template-zh.tex'.
