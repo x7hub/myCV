@@ -16,16 +16,16 @@
 % 字符编码
 % \usepackage[utf8]{inputenc}                   % 替换你正在使用的编码
 % \usepackage{CJKutf8}
-\usepackage{fontspec}
-\usepackage{xunicode}
-\usepackage{xeCJK}
-
-\setmainfont{WenQuanYi Micro Hei Light}
-\setsansfont{WenQuanYi Micro Hei Light}
-\setmonofont{WenQuanYi Micro Hei Light}
-\setCJKmainfont{WenQuanYi Micro Hei Light}
-\setCJKsansfont{WenQuanYi Micro Hei Light}
-\setCJKmonofont{WenQuanYi Micro Hei Light}
+% \usepackage{fontspec}
+% \usepackage{xunicode}
+% \usepackage{xeCJK}
+% 
+% \setmainfont{WenQuanYi Micro Hei Light}
+% \setsansfont{WenQuanYi Micro Hei Light}
+% \setmonofont{WenQuanYi Micro Hei Light}
+% \setCJKmainfont{WenQuanYi Micro Hei Light}
+% \setCJKsansfont{WenQuanYi Micro Hei Light}
+% \setCJKmonofont{WenQuanYi Micro Hei Light}
 
 
 % 调整页面出血
@@ -64,7 +64,7 @@
 \phone[mobile]{(86) 012 3456 7890}              % 可选项、如不需要可删除本行
 % \phone[fixed]{+2~(345)~678~901}               % 可选项、如不需要可删除本行
 % \phone[fax]{+3~(456)~789~012}                 % 可选项、如不需要可删除本行
-\email{x7.0@outlook.com}                    % 可选项、如不需要可删除本行
+\email{xi.geng@outlook.com}                    % 可选项、如不需要可删除本行
 \homepage{http://x7hub.github.io}                  % 可选项、如不需要可删除本行
 % \extrainfo{附加信息 (可选项)}                 % 可选项、如不需要可删除本行
 % \photo[64pt][0.4pt]{picture}                  % ‘64pt’是图片必须压缩至的高度、‘0.4pt‘是图片边框的宽度 (如不需要可调节至0pt)、’picture‘ 是图片文件的名字;可选项、如不需要可删除本行
@@ -87,7 +87,7 @@
 
 
 \section{Personal Information}
-\hspace{1.1cm}\cvdoubleitem{Sex:}{Male}{Date of Birth:}{Aug. 1989}
+\hspace{1.1cm}\cvdoubleitem{Gender:}{Male}{Birthdate:}{Aug. 1989}
 %\hspace{1.1cm}\cvdoubleitem{家乡:}{山东济南}{政治面貌:}{中共党员}
 % \hspace{1.1cm}\cvdoubleitem{学校:}{北京邮电大学}{学历:}{工学硕士}
 
@@ -106,7 +106,7 @@
 
 \section{Professional Skills}
 \cvitem{}{Skilled in Linux. Use Arch Linux as routine operating system}
-\cvitem{}{Skilled in C, C++, Android development. Familiar with Python, PHP, MySQL, Bash, Makefile}
+\cvitem{}{Skilled in Android, C development. Familiar with C++, Python, Bash}
 \cvitem{}{Frequent user of development tools such as Vim, Eclipse, svn, git. Skilled in Markdown, LaTeX}
 \cvitem{}{Score 534 in CET-6}
 
@@ -135,7 +135,7 @@
 
 \tllabelcventry{2013.5}{2013.9}{2013.7--2013.11}{Research of advantage analysis and application recommendations for operator's pipeline resources in the data product}{China Mobile Group Beijing Company}{}{}{%
 \begin{itemize}%
-\item Analysis of the value of the pipeline operator's current situation, analysis of information, information sources and algorithms available by mobile smart phones, research strategies to enhance the operator's pipeline value;
+\item Analysis of the value of the pipeline operator's current situation, analysis of information, information sources and algorithms available by mobile smart phones, research of strategies to enhance the operator's pipeline value;
 \item Undertake analysis of the smart phone to get information from the operator's network, involved in the research of making full use of pipeline advantage and enhancing the competitiveness of products.
 \end{itemize}}
 
@@ -155,12 +155,12 @@
 
 
 \cvitem{}{2011-2013 Third-class, Second-class and First-class Scholarship of Beijing University of Posts and Telecommunications}
-\cvitem{}{2013年 泛网无线通信教育部重点实验室优秀学生}
+\cvitem{}{2013 Outstanding students of Key Laboratory of Universal Wireless Communications, Ministry of Education}
 
 
-\section{自我评价}
+\section{Self Evaluation}
 
-\cvitem{}{热爱技术，乐于学习，责任心强，具备快速融入团队的适应能力}
+\cvitem{}{Love technology, willing to learn, strong sense of responsibility, with the ability to adapt quickly integrate into the team}
 
 % \cvdoubleitem{操作系统:}{Ubuntu, Fedora, CentOS}{数据库:}{MySQL, HBase\footnotemark[1], Memcached}
 % \cvdoubleitem{编程语言:}{C/C++, Java, Python, Bash, Lua}{工具链:}{GCC, GDB, Binutils, LLVM/Clang}
