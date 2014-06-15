@@ -148,8 +148,10 @@
 % \begin{itemize}%\setlength{\itemsep}{1pt }
 % \item 分析运营商的管道价值现状及提升策略；
 % \item 承担智能手机利用网络信息的定位算法的分析研究。
-% \item 
+% \item 经验收获：。
 % \end{itemize}}
+
+
 
 \tllabelcventry{2014}{0}{2014.1--}{移动云计算研究EU FP7 IRSES MobileCloud Project}{}{}{欧盟}{%
 \vspace{-8pt}
@@ -183,9 +185,8 @@
 
 \section{自我评价}
 
-\cvitem{}{热爱技术，乐于学习，希望从事IT相关职业}
-\cvitem{}{熟悉软件开发，适应敏捷式迭代开发的体系，参与完成多个软件开发项目}
-\cvitem{}{工作高效，能承受压力，在一周内实现并改进一套演示系统，提交高质量论文并成功发表}
+\cvitem{}{热爱技术，热爱学习：在一周内实现并改进一套演示系统，提交高质量论文并成功发表}
+\cvitem{}{工作高效，能承受压力：在一周内实现并改进一套演示系统，提交高质量论文并成功发表}
 
 % \cvdoubleitem{操作系统:}{Ubuntu, Fedora, CentOS}{数据库:}{MySQL, HBase\footnotemark[1], Memcached}
 % \cvdoubleitem{编程语言:}{C/C++, Java, Python, Bash, Lua}{工具链:}{GCC, GDB, Binutils, LLVM/Clang}
