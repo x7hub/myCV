@@ -1,0 +1,220 @@
+%% start of file `template-zh.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[10pt,a4paper,sans]{moderncv}   % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv 主题
+\moderncvstyle{classic}                        % 选项参数是 ‘casual’, ‘classic’, ‘oldstyle’ 和 ’banking’
+\moderncvcolor{blue}                          % 选项参数是 ‘blue’ (默认)、‘orange’、‘green’、‘red’、‘purple’ 和 ‘grey’
+%\nopagenumbers{}                             % 消除注释以取消自动页码生成功能
+% \definecolor{color2}{rgb}{0,0,0}		% black
+
+% 字符编码
+% \usepackage[utf8]{inputenc}                   % 替换你正在使用的编码
+% \usepackage{CJKutf8}
+\usepackage{fontspec}
+\usepackage{xunicode}
+\usepackage[slantfont,boldfont,CJKnumber]{xeCJK}
+
+\setmainfont{WenQuanYi Micro Hei Light}
+\setsansfont{WenQuanYi Micro Hei Light}
+\setmonofont{WenQuanYi Micro Hei Light}
+\setCJKmainfont{WenQuanYi Micro Hei Light}
+\setCJKsansfont{WenQuanYi Micro Hei Light}
+\setCJKmonofont{WenQuanYi Micro Hei Light}
+
+
+% 调整页面出血
+\usepackage[scale=0.82]{geometry}
+% %\setlength{\hintscolumnwidth}{3cm}           % 如果你希望改变日期栏的宽度
+
+% moderntimeline
+\usepackage[firstyear=2007,lastyear=2015]{moderntimeline}
+
+% moderntimeline 居中
+\makeatletter
+\tikzset{
+    tl@startyear/.append style={
+        xshift=(0.5-\tl@startfraction)*\hintscolumnwidth,
+        anchor=base
+    }
+}
+\makeatother
+
+%避免cventry加粗的bug，第6项右对齐
+\renewcommand*{\cventry}[7][.25em]{%
+  \linespread{1.2}
+  \cvitem[#1]{#2}{%
+    {#3}%
+    \ifthenelse{\equal{#4}{}}{}{, {#4}}%
+    \ifthenelse{\equal{#5}{}}{}{, #5}%
+    \ifthenelse{\equal{#6}{}}{}{\hfill#6}%
+%     .\strut%
+    \ifx#7&%
+      \else{\newline{}\begin{minipage}[t]{\linewidth}\small#7\end{minipage}}
+    \fi
+  }
+}
+
+\renewcommand{\labelitemi}          {\strut\textcolor{color1}{\large$\circ$}}% the \rmfamily is required to force Latin Modern fonts when using sans serif, as OMS/lmss/m/n is not defined and gets substituted by OMS/cmsy/m/n
+
+
+% 个人信息
+\name{哟}{嚯嚯}
+% \title{简历题目 (可选项)}                     % 可选项、如不需要可删除本行
+% % \address{街道及门牌号}{邮编及城市}            % 可选项、如不需要可删除本行
+\phone[mobile]{012 3456 7890}              % 可选项、如不需要可删除本行
+% \phone[fixed]{+2~(345)~678~901}               % 可选项、如不需要可删除本行
+% \phone[fax]{+3~(456)~789~012}                 % 可选项、如不需要可删除本行
+\email{x7.0@outlook.com}                    % 可选项、如不需要可删除本行
+% \homepage{http://x7hub.github.io}                  % 可选项、如不需要可删除本行
+% \extrainfo{附加信息 (可选项)}                 % 可选项、如不需要可删除本行
+% \photo[64pt][0.4pt]{picture}                  % ‘64pt’是图片必须压缩至的高度、‘0.4pt‘是图片边框的宽度 (如不需要可调节至0pt)、’picture‘ 是图片文件的名字;可选项、如不需要可删除本行
+% \quote{引言(可选项)}                          % 可选项、如不需要可删除本行
+
+% 显示索引号;仅用于在简历中使用了引言
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+
+% 分类索引
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            内容
+%----------------------------------------------------------------------------------
+\begin{document}
+% \begin{CJK}{UTF8}{gbsn}                       % 详情参阅CJK文件包
+\maketitle
+
+
+% \section{个人资料}
+% \hspace{1.1cm}\cvdoubleitem{性别:}{男}{出生日期:}{1989年8月}
+%\hspace{1.1cm}\cvdoubleitem{家乡:}{山东济南}{}{}%{政治面貌:}{中共党员}
+% \hspace{1.1cm}\cvdoubleitem{学校:}{北京邮电大学}{学历:}{工学硕士}
+
+\vspace{-25pt}
+\httplink[http://x7res.info]{x7res.info}
+\vspace{20pt}
+
+\section{教育背景}
+
+\tllabelcventry{2012}{0}{2012--2015}{工学硕士}{北京邮电大学}{信号与信息处理}{}{
+% \begin{itemize}%
+% \item 研究方向: 移动互联网
+% \end{itemize}
+}
+
+\vspace{-10pt}
+
+\tllabelcventry{2008}{2012}{2008--2012}{工学学士}{北京邮电大学}{信息工程}{}{
+% \begin{itemize}%
+% \item 主要课程: 数据结构, 信息论, 通信原理, 计算机网络
+% \end{itemize}
+}
+
+\vspace{-15pt}
+
+
+\section{实习经历}
+
+\tllabelcventry{2014.7}{0}{2014.7--}{手机微博客户端技术开发}{}{}{新浪微博}{%
+\vspace{-8pt}
+\begin{itemize}%
+\item 参考iBeacon和Nearby，利用蓝牙、WiFi、声波等，在Android上的近距离通信技术的探索
+\item 微博客户端的性能测试，开发自动测试脚本，研究提高图形性能的方案
+\item Java编程~~~~~~~~\textcolor{color1}{\large$\circ$}~~Shell编程~~~~~~~~\textcolor{color1}{\large$\circ$}~~Python编程
+\end{itemize}}
+
+
+\section{项目经历}
+
+\tllabelcventry{2014.5}{0}{2014.5--}{LBS商场打折信息分享平台}{}{}{参赛项目}{%
+\vspace{-8pt}
+\begin{itemize}%
+\item 用户间互相分享打折信息的平台，包括Android应用``折扣控''和后台服务器
+\item 开发，合作开发Android应用，独立开发后台服务器
+\item Java编程~~~~~~~~\textcolor{color1}{\large$\circ$}~~PHP\&MySQL编程
+\end{itemize}}
+
+\tllabelcventry{2014.5}{2014.7}{2014.5--2014.7}{移动网络质量评估体系}{}{}{中兴研究院}{%
+\vspace{-8pt}
+\begin{itemize}%
+\item 针对智能终端不同类型的业务量化QoS评价
+\item 开发，承担开发网络质量参数收集平台，协助分析网络QoS体系
+\item Java编程~~~~~~~~\textcolor{color1}{\large$\circ$}~~PHP\&MySQL编程%~~~~~~~~\textcolor{color1}{\large$\circ$}~~阅读文献
+\end{itemize}}
+
+\tllabelcventry{2014}{2014.5}{2014.1--2014.5}{移动云计算研究EU FP7 IRSES MobileCloud Project}{}{}{欧盟}{%
+\vspace{-8pt}
+\begin{itemize}%\setlength{\itemsep}{1pt }
+\item 传统云计算在移动互联网环境的融合与应用
+\item 理论研究和开发，承担基于HTTP的动态自适应流媒体(DASH)的研究，开发利用Android的演示系统，在IEEE会议中发表了论文
+\item Java编程%~~~~~~~~\textcolor{color1}{\large$\circ$}~~阅读文献
+\end{itemize}}
+
+% \tllabelcventry{2013.5}{2013.9}{2013.7--2013.8}{运营商管道资源在数据产品中的优势分析及应用建议研究}{}{}{北京移动}{%
+% \vspace{-8pt}
+% \begin{itemize}%\setlength{\itemsep}{1pt }
+% \item 分析运营商的管道价值现状及提升策略；
+% \item 理论研究，承担智能手机利用网络信息的定位算法的分析研究。
+% \item 熟悉定位原理和方法~~~~~~~~\textcolor{color1}{\large$\circ$}~~阅读文献能力
+% \end{itemize}}
+
+\tllabelcventry{2013.5}{2014.1}{2013.7--2014.1}{双卡智能手机应用开发}{}{}{电信天翼}{%
+\vspace{-8pt}
+\begin{itemize}%\setlength{\itemsep}{1pt }
+\item 针对电信Android双卡双待手机的应用开发
+\item 开发，修改Google原生应用，承担日历、通讯录、拨号盘三个模块的开发
+\item Java编程
+\end{itemize}}
+
+\tllabelcventry{2013}{2013.7}{2013.1--2013.7}{无线网络质量测量平台}{}{}{NTT DoCoMo}{%
+\vspace{-8pt}
+\begin{itemize}%\setlength{\itemsep}{1pt }
+\item Android手机网络测速软件''手机网速摇摇看''，各大应用市场可下载
+\item 开发，承担核心测试引擎的JNI实现，用户数据收集
+\item Java\&C编程~~~~~~~~\textcolor{color1}{\large$\circ$}~~PHP\&MySQL编程
+\end{itemize}}
+
+\tllabelcventry{2012.2}{2013}{2012.3--2012.12}{绿色3G-WiFi路由器}{}{}{NTT DoCoMo}{%
+\vspace{-8pt}
+\begin{itemize}%\setlength{\itemsep}{1pt }
+\item 在嵌入式Linux系统中实现通过WiFi热点连接3G网络，并优化能耗
+\item 开发，承担ARM软件和脚本开发，针对FTP和HTTP业务优化能耗
+\item Linux操作~~~~~~~~\textcolor{color1}{\large$\circ$}~~C语言Socket编程~~~~~~~~\textcolor{color1}{\large$\circ$}~~Bash脚本~~~~~~~~\textcolor{color1}{\large$\circ$}~~内核编译
+\end{itemize}}
+
+
+\section{专业技能}
+\cvitem{}{熟练掌握Linux基本操作，以Arch Linux为日常操作系统}
+\cvitem{}{熟练掌握Java、C应用开发，熟悉PHP、Shell}
+\cvitem{}{熟悉Vim、Eclipse、svn、git等开发工具，掌握Markdown、LaTeX编写文档}
+\cvitem{}{大学英语六级考试534分}
+
+
+% \section{获奖情况}
+% 
+% 
+% \cvitem{}{2011-2013年 北京邮电大学三等、二等、一等奖学金}
+% \cvitem{}{2013年 泛网无线通信教育部重点实验室优秀学生}
+
+
+% \section{自我评价}
+% 
+% \cvitem{}{热爱技术，乐于学习，希望从事IT相关职业}
+% \cvitem{}{熟悉软件开发，适应敏捷式迭代开发的体系，参与完成多个软件开发项目}
+% \cvitem{}{工作高效，能承受压力，在一周内实现并改进一套演示系统，完成高质量论文并成功发表}
+
+
+\clearpage
+% \end{CJK}
+\end{document}
+
+
+%% 文件结尾 `template-zh.tex'.
