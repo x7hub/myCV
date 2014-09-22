@@ -11,7 +11,7 @@
 % moderncv 主题
 \moderncvstyle{classic}                        % 选项参数是 ‘casual’, ‘classic’, ‘oldstyle’ 和 ’banking’
 \moderncvcolor{blue}                          % 选项参数是 ‘blue’ (默认)、‘orange’、‘green’、‘red’、‘purple’ 和 ‘grey’
-%\nopagenumbers{}                             % 消除注释以取消自动页码生成功能
+\nopagenumbers{}                             % 消除注释以取消自动页码生成功能
 % \definecolor{color2}{rgb}{0,0,0}		% black
 
 % 字符编码
@@ -21,16 +21,23 @@
 \usepackage{xunicode}
 \usepackage[slantfont,boldfont,CJKnumber]{xeCJK}
 
-\setmainfont{WenQuanYi Micro Hei Light}
-\setsansfont{WenQuanYi Micro Hei Light}
-\setmonofont{WenQuanYi Micro Hei Light}
-\setCJKmainfont{WenQuanYi Micro Hei Light}
-\setCJKsansfont{WenQuanYi Micro Hei Light}
-\setCJKmonofont{WenQuanYi Micro Hei Light}
+% \setmainfont{WenQuanYi Micro Hei Light}
+% \setsansfont{WenQuanYi Micro Hei Light}
+% \setmonofont{WenQuanYi Micro Hei Light}
+% \setCJKmainfont{WenQuanYi Micro Hei Light}
+% \setCJKsansfont{WenQuanYi Micro Hei Light}
+% \setCJKmonofont{WenQuanYi Micro Hei Light}
+
+\setmainfont{Microsoft YaHei Light}
+\setsansfont{Microsoft YaHei Light}
+\setmonofont{Microsoft YaHei Light}
+\setCJKmainfont{Microsoft YaHei Light}
+\setCJKsansfont{Microsoft YaHei Light}
+\setCJKmonofont{Microsoft YaHei Light}
 
 
 % 调整页面出血
-\usepackage[scale=0.83]{geometry}
+\usepackage[scale=0.82,top=1.2cm,bottom=0cm]{geometry}
 % %\setlength{\hintscolumnwidth}{3cm}           % 如果你希望改变日期栏的宽度
 
 % moderntimeline
@@ -61,8 +68,7 @@
   }
 }
 
-\renewcommand{\labelitemi}          {\strut\textcolor{color1}{\large$\circ$}}% the \rmfamily is required to force Latin Modern fonts when using sans serif, as OMS/lmss/m/n is not defined and gets substituted by OMS/cmsy/m/n
-
+% \renewcommand{\labelitemi}          {\strut\textcolor{color1}{\large$\circ$}}% the \rmfamily is required to force Latin Modern fonts when using sans serif, as OMS/lmss/m/n is not defined and gets substituted by OMS/cmsy/m/n
 
 % 个人信息
 \name{哟}{嚯嚯}
@@ -74,7 +80,7 @@
 \email{x7.0@outlook.com}                    % 可选项、如不需要可删除本行
 \homepage{http://x7res.info}                  % 可选项、如不需要可删除本行
 % \extrainfo{附加信息 (可选项)}                 % 可选项、如不需要可删除本行
-% \photo[64pt][0.4pt]{picture}                  % ‘64pt’是图片必须压缩至的高度、‘0.4pt‘是图片边框的宽度 (如不需要可调节至0pt)、’picture‘ 是图片文件的名字;可选项、如不需要可删除本行
+\photo[64pt][0pt]{/home/commander/Pictures/DSC_0006.JPG}                  % ‘64pt’是图片必须压缩至的高度、‘0.4pt‘是图片边框的宽度 (如不需要可调节至0pt)、’picture‘ 是图片文件的名字;可选项、如不需要可删除本行
 % \quote{引言(可选项)}                          % 可选项、如不需要可删除本行
 
 % 显示索引号;仅用于在简历中使用了引言
@@ -92,7 +98,7 @@
 % \begin{CJK}{UTF8}{gbsn}                       % 详情参阅CJK文件包
 \maketitle
 
-% \vspace{-10pt}
+\vspace{-17pt}
 
 \section{个人资料}
 \hspace{1.1cm}\cvdoubleitem{性别:}{男}{民族:}{汉}
@@ -107,30 +113,30 @@
 
 \section{教育背景}
 
-\tllabelcventry{2012}{0}{2012--2015}{工学硕士}{北京邮电大学}{信号与信息处理}{}{
-\begin{itemize}%
-\item 研究方向: 移动互联网
-\end{itemize}
+\tllabelcventry{2012}{0}{2012--2015}{工学硕士}{北京邮电大学}{信号与信息处理~~研究方向: 移动互联网}{}{
+% \begin{itemize}%
+% \item 研究方向: 移动互联网
+% \end{itemize}
 }
 
-% \vspace{-10pt}
+\vspace{-10pt}
 
 \tllabelcventry{2008}{2012}{2008--2012}{工学学士}{北京邮电大学}{信息工程}{}{
-\begin{itemize}%
-\item 主要课程: 通信原理, 信息论, 计算机网络
-\end{itemize}
+% \begin{itemize}%
+% \item 主要课程: 通信原理, 信息论, 计算机网络
+% \end{itemize}
 }
 
-% \vspace{-15pt}
+\vspace{-15pt}
 
 
 \section{实习经历}
 
-\tllabelcventry{2014.7}{0}{2014.7--}{手机微博客户端技术开发}{}{}{新浪微博}{%
+\tllabelcventry{2014.7}{0}{2014.7--}{新浪微博~-~手机微博客户端技术开发}{}{}{}{%
 \vspace{-8pt}
 \begin{itemize}%
-\item 智能手机上的近距离通信技术的探索，在Android手机上实现了苹果的iBeacon协议，利用超声波实现了手机间的声波通信
-\item 微博客户端的性能测试，自动测试脚本，研究提高图形性能的方案
+\item 智能手机上的\textbf{近距离通信技术}的探索：在Android手机上实现了苹果的iBeacon协议，用于低功耗的室内定位推送消息；利用超声波实现了手机间的\textbf{声波通信}，用于商场广播和附近用户发现
+% \item 微博客户端性能测试，编写自动测试脚本，研究提高流畅度的方案
 % \item Android编程~~~~~~~~\textcolor{color1}{\large$\circ$}~~Shell编程
 \end{itemize}}
 
@@ -145,38 +151,42 @@
 % % \item Android编程~~~~~~~~\textcolor{color1}{\large$\circ$}~~PHP\&MySQL编程
 % \end{itemize}}
 
-\tllabelcventry{2014.5}{2014.7}{2014.5--2014.7}{移动网络质量评估体系}{}{}{中兴研究院}{%
-\vspace{-8pt}
+\tllabelcventry{2014.5}{2014.7}{2014.5--2014.7}{中兴研究院~-~移动网络质量评估体系}{}{}{}{%
+\vspace{-5pt}
 \begin{itemize}%
-\item 针对手机终端不同类型的业务量化QoS评价，承担开发网络质量参数收集平台，协助分析网络QoS体系
+\item 针对手机终端不同类型的业务量化QoS评价，开发\textbf{网络质量}参数收集平台，协助分析网络QoS体系
 % \item Android编程~~~~~~~~\textcolor{color1}{\large$\circ$}~~PHP\&MySQL编程%~~~~~~~~\textcolor{color1}{\large$\circ$}~~阅读文献
 \end{itemize}}
+\vspace{3pt}
 
-\tllabelcventry{2014}{2014.5}{2014.1--2014.5}{移动云计算研究EU FP7 IRSES MobileCloud Project}{}{}{欧盟}{%
-\vspace{-8pt}
+\tllabelcventry{2014}{2014.5}{2014.1--2014.5}{欧盟~-~移动云计算研究EU FP7 IRSES MobileCloud Project}{}{}{}{%
+\vspace{-5pt}
 \begin{itemize}%\setlength{\itemsep}{1pt }
-\item 研究传统云计算在移动互联网环境的融合与应用，负责基于HTTP的动态自适应流媒体(DASH)的研究，在IEEE会议中发表了论文，已被EI检索收录
+\item 研究传统\textbf{云计算}在\textbf{移动互联网}环境的融合与应用，负责基于HTTP的动态自适应流媒体(DASH)的研究，在IEEE会议中发表了论文：On adaptive live streaming in mobile cloud computing environments with D2D cooperation，已被EI检索收录
 % \item Android编程%~~~~~~~~\textcolor{color1}{\large$\circ$}~~阅读文献
 \end{itemize}}
+\vspace{3pt}
 
-\tllabelcventry{2013.5}{2013.9}{2013.7--2013.8}{运营商管道资源在数据产品中的优势分析及应用建议研究}{}{}{北京移动}{%
-\vspace{-8pt}
+\tllabelcventry{2013.5}{2013.9}{2013.7--2013.8}{北京移动~-~运营商管道资源在数据产品中的优势分析及应用建议研究}{}{}{}{%
+\vspace{-5pt}
 \begin{itemize}%\setlength{\itemsep}{1pt }
-\item 分析微信等应用为运营商带来的挑战，分析运营商的管道价值现状及提升策略，负责研究手机利用运营商网络信息的定位算法。
+\item 分析微信等OTT业务为运营商带来的挑战，研究\textbf{运营商的管道价值}现状及提升策略，负责研究手机利用运营商网络信息的定位算法
 % % \item 熟悉定位原理和方法~~~~~~~~\textcolor{color1}{\large$\circ$}~~阅读文献能力
 \end{itemize}}
+\vspace{3pt}
 
-\tllabelcventry{2013.5}{2014.1}{2013.7--2014.1}{双卡智能手机应用开发}{}{}{电信天翼}{%
-\vspace{-8pt}
+\tllabelcventry{2013.5}{2014.1}{2013.7--2014.1}{电信天翼~-~双卡智能手机应用开发}{}{}{}{%
+\vspace{-5pt}
 \begin{itemize}%\setlength{\itemsep}{1pt }
-\item 针对电信Android双卡双待手机的应用开发，承担日历、通讯录、拨号盘三个模块的开发
+\item 针对电信Android\textbf{双卡双待手机的应用}开发，承担日历、通讯录、拨号盘三个模块的开发
 % \item Android编程~~~~~~~~\textcolor{color1}{\large$\circ$}~~修改Google原生应用
 \end{itemize}}
+\vspace{3pt}
 
-\tllabelcventry{2013}{2013.7}{2013.1--2013.7}{无线网络质量测量平台}{}{}{日本电信 NTT DoCoMo}{%
-\vspace{-8pt}
+\tllabelcventry{2013}{2013.7}{2013.1--2013.7}{日本电信 NTT DoCoMo~-~无线网络质量测量平台}{}{}{}{%
+\vspace{-5pt}
 \begin{itemize}%\setlength{\itemsep}{1pt }
-\item Android手机网络测速软件``手机网速摇摇看''，各大应用市场可下载，承担核心测试引擎的JNI实现，用户数据收集
+\item Android手机网络测速软件``手机网速摇摇看''，用于\textbf{测试手机3G/4G网速}，各大应用市场可下载，承担核心测试引擎的实现
 % \item Android JNI编程~~~~~~~~\textcolor{color1}{\large$\circ$}~~PHP\&MySQL编程
 \end{itemize}}
 
@@ -196,19 +206,26 @@
 % \cvitem{}{大学英语六级考试534分}
 
 
+\section{活动经历}
+
+\tllabelcventry{2012}{2015}{2012--2014}{班级生活委员，多次组织班级活动，增进了与同学的沟通，了解身边同学的生活}{}{}{}{}
+\vspace{-10pt}
+\tllabelcventry{2014.5}{2014.9}{2014.5}{在里斯本举办的国际会议ICT2014发表论文，与国外学者深入的探讨，增强交流能力}{}{}{}{}
+\vspace{-10pt}
+\tllabelcventry{2014.0}{2014.4}{2014.3}{参加学校羽毛球比赛，进入淘汰赛阶段}{}{}{}{}
+\vspace{-10pt}
+\tllabelcventry{2012.5}{2012.9}{2012.9}{国际会议IC-NIDC2012服务工作，参会场馆布置、人员接待和引导}{}{}{}{}
+\vspace{-10pt}
+\tllabelcventry{2012.0}{2012.4}{2012.5}{代表班级参与学校毕业杯篮球赛}{}{}{}{}
+\vspace{-10pt}
+\tllabelcventry{2008}{2009}{2008--2009}{北京邮电大学围棋社团，参与组织社团活动}{}{}{}{}
+\vspace{-15pt}
 
 \section{获奖情况}
 
-\cvitem{}{\textcolor{color1}{\large$\circ$}~~2011-2013年 北京邮电大学三等、二等、一等奖学金}
-\cvitem{}{\textcolor{color1}{\large$\circ$}~~2013年 泛网无线通信教育部重点实验室优秀学生}
-
-
-\section{其他信息}
-
-\cvitem{}{\textcolor{color1}{\large$\circ$}~~活动经历：担任班级生活委员，曾担任学习委员，多次组织班级活动}
-
-\cvitem{}{\textcolor{color1}{\large$\circ$}~~业余时间组织兴趣团队开发软件，能合理地协调团队成员}
-
+\tllabelcventry{2013.5}{2013.9}{2013}{泛网无线通信教育部重点实验室优秀学生}{}{}{}{}
+\vspace{-10pt}
+\tllabelcventry{2011}{2013}{2011--2014}{北京邮电大学三等、二等、一等奖学金}{}{}{}{}
 
 
 % \section{自我评价}
