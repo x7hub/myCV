@@ -1,0 +1,246 @@
+%% start of file `template-zh.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[10pt,a4paper,sans]{moderncv}   % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv 主题
+\moderncvstyle{classic}                        % 选项参数是 ‘casual’, ‘classic’, ‘oldstyle’ 和 ’banking’
+\moderncvcolor{blue}                          % 选项参数是 ‘blue’ (默认)、‘orange’、‘green’、‘red’、‘purple’ 和 ‘grey’
+\nopagenumbers{}                             % 消除注释以取消自动页码生成功能
+% \definecolor{color2}{rgb}{0,0,0}		% black
+
+% 字符编码
+% \usepackage[utf8]{inputenc}                   % 替换你正在使用的编码
+% \usepackage{CJKutf8}
+\usepackage{fontspec}
+\usepackage{xunicode}
+\usepackage[slantfont,boldfont,CJKnumber]{xeCJK}
+
+% \setmainfont{WenQuanYi Micro Hei Light}
+% \setsansfont{WenQuanYi Micro Hei Light}
+% \setmonofont{WenQuanYi Micro Hei Light}
+% \setCJKmainfont{WenQuanYi Micro Hei Light}
+% \setCJKsansfont{WenQuanYi Micro Hei Light}
+% \setCJKmonofont{WenQuanYi Micro Hei Light}
+
+\setmainfont{Microsoft YaHei Light}
+\setsansfont{Microsoft YaHei Light}
+\setmonofont{Microsoft YaHei Light}
+\setCJKmainfont{Microsoft YaHei Light}
+\setCJKsansfont{Microsoft YaHei Light}
+\setCJKmonofont{Microsoft YaHei Light}
+
+
+% 调整页面出血
+\usepackage[scale=0.82,top=0.8cm,bottom=0cm]{geometry}
+% %\setlength{\hintscolumnwidth}{3cm}           % 如果你希望改变日期栏的宽度
+
+% moderntimeline
+\usepackage[firstyear=2007,lastyear=2015]{moderntimeline}
+
+% moderntimeline 居中
+\makeatletter
+\tikzset{
+    tl@startyear/.append style={
+        xshift=(0.5-\tl@startfraction)*\hintscolumnwidth,
+        anchor=base
+    }
+}
+\makeatother
+
+%避免cventry加粗的bug，第6项右对齐
+\renewcommand*{\cventry}[7][.25em]{%
+  \linespread{1.2}
+  \cvitem[#1]{#2}{%
+    {#3}%
+    \ifthenelse{\equal{#4}{}}{}{, {#4}}%
+    \ifthenelse{\equal{#5}{}}{}{, #5}%
+    \ifthenelse{\equal{#6}{}}{}{\hfill#6}%
+%     .\strut%
+    \ifx#7&%
+      \else{\newline{}\begin{minipage}[t]{\linewidth}\small#7\end{minipage}}
+    \fi
+  }
+}
+
+% \renewcommand{\labelitemi}          {\strut\textcolor{color1}{\large$\circ$}}% the \rmfamily is required to force Latin Modern fonts when using sans serif, as OMS/lmss/m/n is not defined and gets substituted by OMS/cmsy/m/n
+
+% 个人信息
+\name{哟}{嚯嚯}
+% \title{简历题目 (可选项)}                     % 可选项、如不需要可删除本行
+% % \address{街道及门牌号}{邮编及城市}            % 可选项、如不需要可删除本行
+\phone[mobile]{123 4567 8900}              % 可选项、如不需要可删除本行
+% \phone[fixed]{+2~(345)~678~901}               % 可选项、如不需要可删除本行
+% \phone[fax]{+3~(456)~789~012}                 % 可选项、如不需要可删除本行
+\email{x7.0@outlook.com}                    % 可选项、如不需要可删除本行
+\homepage{http://x7res.info}                  % 可选项、如不需要可删除本行
+% \extrainfo{附加信息 (可选项)}                 % 可选项、如不需要可删除本行
+\photo[64pt][0pt]{/home/commander/Pictures/IMG_3660_SMALL.JPG}                  % ‘64pt’是图片必须压缩至的高度、‘0.4pt‘是图片边框的宽度 (如不需要可调节至0pt)、’picture‘ 是图片文件的名字;可选项、如不需要可删除本行
+% \quote{引言(可选项)}                          % 可选项、如不需要可删除本行
+
+% 显示索引号;仅用于在简历中使用了引言
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+
+% 分类索引
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            内容
+%----------------------------------------------------------------------------------
+\begin{document}
+% \begin{CJK}{UTF8}{gbsn}                       % 详情参阅CJK文件包
+\maketitle
+
+\vspace{-20pt}
+
+\section{个人资料}
+\hspace{1.1cm}\cvdoubleitem{性别:}{男}{民族:}{汉}
+\hspace{1.1cm}\cvdoubleitem{学历:}{工学硕士}{家乡:}{山东济南}
+\hspace{1.1cm}\cvdoubleitem{政治面貌:}{中共党员}{英语六级:}{534}
+% \hspace{1.1cm}\cvdoubleitem{学校:}{北京邮电大学}{学历:}{工学硕士}
+% \hspace{1.8cm}\cvdoubleitem{英语六级:}{534分}{}{}
+
+% \vspace{-25pt}
+% \httplink[http://x7res.info]{x7res.info}
+% \vspace{20pt}
+
+\section{教育背景}
+
+\tllabelcventry{2012}{2015}{2012--2015}{工学硕士}{北京邮电大学}{信息与通信工程/信号与信息处理}{}{
+% \begin{itemize}%
+% \item 研究方向: 移动互联网
+% \end{itemize}
+}
+
+\vspace{-10pt}
+
+\tllabelcventry{2008}{2012}{2008--2012}{工学学士}{北京邮电大学}{信息与通信工程/信息工程}{}{
+% \begin{itemize}%
+% \item 主要课程: 通信原理, 信息论, 计算机网络
+% \end{itemize}
+}
+
+\vspace{-15pt}
+
+
+\section{实习经历}
+
+\tllabelcventry{2014.5}{2015}{2014.7--}{新浪微博~-~手机微博客户端技术开发}{}{}{}{%
+\vspace{-8pt}
+\begin{itemize}%
+\item 智能手机上的\textbf{近距离通信技术}的探索：在Android手机上实现了苹果的iBeacon协议，用于低功耗的室内定位推送消息；利用超声波实现了手机间的\textbf{声波通信}，用于商场广播和附近用户发现
+% \item 微博客户端性能测试，编写自动测试脚本，研究提高流畅度的方案
+% \item Android编程~~~~~~~~\textcolor{color1}{\large$\circ$}~~Shell编程
+\end{itemize}}
+
+
+\section{项目经历}
+
+% \tllabelcventry{2014.5}{0}{2014.5--}{LBS商场打折信息分享平台}{}{}{腾讯移动互联网创新创业大赛}{%
+% \vspace{-8pt}
+% \begin{itemize}%
+% \item 用户间互相分享打折信息的平台，包括Android应用''折扣控''和后台服务器
+% \item 协调团队成员，合作开发Android应用，独立开发后台服务器，使用Yii框架
+% % \item Android编程~~~~~~~~\textcolor{color1}{\large$\circ$}~~PHP\&MySQL编程
+% \end{itemize}}
+
+\tllabelcventry{2014.5}{2014.7}{2014.5--2014.7}{中兴研究院~-~移动网络质量评估体系}{}{}{}{%
+\vspace{-5pt}
+\begin{itemize}%
+\item 针对手机终端不同类型的业务量化QoS评价，开发\textbf{网络质量}参数收集平台，协助分析网络QoS体系
+% \item Android编程~~~~~~~~\textcolor{color1}{\large$\circ$}~~PHP\&MySQL编程%~~~~~~~~\textcolor{color1}{\large$\circ$}~~阅读文献
+\end{itemize}}
+\vspace{3pt}
+
+\tllabelcventry{2014}{2014.5}{2014.1--2014.5}{欧盟~-~移动云计算研究EU FP7 IRSES MobileCloud Project}{}{}{}{%
+\vspace{-5pt}
+\begin{itemize}%\setlength{\itemsep}{1pt }
+\item 研究传统\textbf{云计算}在\textbf{移动互联网}环境的融合与应用，在IEEE会议中发表了论文：On adaptive live streaming in mobile cloud computing environments with D2D cooperation，已被EI检索收录
+% 负责基于HTTP的动态自适应流媒体(DASH)的研究，
+% \item Android编程%~~~~~~~~\textcolor{color1}{\large$\circ$}~~阅读文献
+\end{itemize}}
+\vspace{3pt}
+
+\tllabelcventry{2013.5}{2013.9}{2013.7--2013.8}{北京移动~-~运营商管道资源在数据产品中的优势分析及应用建议研究}{}{}{}{%
+\vspace{-5pt}
+\begin{itemize}%\setlength{\itemsep}{1pt }
+\item 分析微信等OTT业务为运营商带来的挑战，研究运营商的\textbf{管道价值}现状及提升策略，负责研究手机利用运营商网络信息的定位算法
+% % \item 熟悉定位原理和方法~~~~~~~~\textcolor{color1}{\large$\circ$}~~阅读文献能力
+\end{itemize}}
+\vspace{3pt}
+
+\tllabelcventry{2013.5}{2014.1}{2013.7--2014.1}{电信天翼~-~双卡智能手机应用开发}{}{}{}{%
+\vspace{-5pt}
+\begin{itemize}%\setlength{\itemsep}{1pt }
+\item 针对电信Android\textbf{双卡双待手机的应用}开发，承担日历、通讯录、拨号盘三个模块的开发
+% \item Android编程~~~~~~~~\textcolor{color1}{\large$\circ$}~~修改Google原生应用
+\end{itemize}}
+\vspace{3pt}
+
+\tllabelcventry{2013}{2013.7}{2013.1--2013.7}{日本电信 NTT DoCoMo~-~无线网络质量测量平台}{}{}{}{%
+\vspace{-5pt}
+\begin{itemize}%\setlength{\itemsep}{1pt }
+\item Android手机网络测速软件``手机网速摇摇看''，用于\textbf{测试手机3G/4G网速}，各大应用市场可下载%，承担核心测试引擎的实现
+% \item Android JNI编程~~~~~~~~\textcolor{color1}{\large$\circ$}~~PHP\&MySQL编程
+\end{itemize}}
+
+% \tllabelcventry{2012.2}{2013}{2012.3--2012.12}{绿色3G-WiFi路由器}{}{}{NTT DoCoMo}{%
+% \vspace{-8pt}
+% \begin{itemize}%\setlength{\itemsep}{1pt }
+% \item 在嵌入式Linux系统中实现通过WiFi热点连接3G网络，并优化能耗
+% \item 负责开发，承担ARM软件和脚本开发，针对FTP和HTTP业务优化能耗
+% % \item Linux操作~~~~~~~~\textcolor{color1}{\large$\circ$}~~C语言Socket编程~~~~~~~~\textcolor{color1}{\large$\circ$}~~Bash脚本~~~~~~~~\textcolor{color1}{\large$\circ$}~~内核编译
+% \end{itemize}}
+
+
+% \section{专业技能}
+% \cvitem{}{熟练掌握Linux基本操作，以Arch Linux为日常操作系统}
+% \cvitem{}{熟练掌握Android、C应用开发，熟悉PHP、Shell}
+% \cvitem{}{熟悉Vim、Eclipse、svn、git等开发工具，掌握Markdown、LaTeX编写文档}
+% \cvitem{}{大学英语六级考试534分}
+
+
+\section{活动经历}
+
+\tllabelcventry{2012}{2015}{2012--2014}{班级生活委员，多次组织班级活动，增进了与同学的沟通，了解身边同学的生活}{}{}{}{}
+\vspace{-10pt}
+% \tllabelcventry{2014.5}{2014.9}{2014.5}{在里斯本举办的国际会议ICT2014发表论文，与国外学者深入的探讨，增强交流能力}{}{}{}{}
+% \vspace{-10pt}
+\tllabelcventry{2014.0}{2014.4}{2014.3}{参加学校羽毛球比赛，进入淘汰赛阶段}{}{}{}{}
+\vspace{-10pt}
+\tllabelcventry{2012.5}{2012.9}{2012.9}{国际会议IC-NIDC2012服务工作，参会场馆布置、人员接待和引导}{}{}{}{}
+\vspace{-10pt}
+\tllabelcventry{2012.0}{2012.4}{2012.5}{代表班级参与学校毕业杯篮球赛}{}{}{}{}
+\vspace{-10pt}
+\tllabelcventry{2008}{2009}{2008--2009}{北京邮电大学围棋社团，参与组织社团活动}{}{}{}{}
+\vspace{-15pt}
+
+\section{获奖情况}
+
+\tllabelcventry{2014.5}{2014.9}{2014}{北京邮电大学优秀学生干部}{}{}{}{}
+\vspace{-10pt}
+\tllabelcventry{2013.5}{2013.9}{2013}{泛网无线通信教育部重点实验室优秀学生}{}{}{}{}
+\vspace{-10pt}
+\tllabelcventry{2011}{2015}{2011--2014}{北京邮电大学三等、二等、一等奖学金}{}{}{}{}
+
+
+% \section{自我评价}
+% 
+% \cvitem{}{热爱技术，乐于学习，希望从事IT相关职业}
+% \cvitem{}{熟悉软件开发，适应敏捷式迭代开发的体系，参与完成多个软件开发项目}
+% \cvitem{}{工作高效，能承受压力，在一周内实现并改进一套演示系统，完成高质量论文并成功发表}
+
+
+\clearpage
+% \end{CJK}
+\end{document}
+
+
+%% 文件结尾 `template-zh.tex'.
